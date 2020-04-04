@@ -19,7 +19,7 @@ COPY --from=0 /root/ioquake3 /home/ioq3srv/ioquake3
 RUN ln -sf /data/pak0.pk3 /home/ioq3srv/ioquake3/baseq3/pak0.pk3 && \
   ln -sf /data/server.cfg /home/ioq3srv/ioquake3/baseq3/server.cfg && \
   adduser ioq3srv -D && \
-  rm /usr/bin/qemu-arm-static
+  rm -r /usr/bin/qemu-arm-static
 RUN ln -s /data/maps /home/ioq3srv/ioquake3/maps
 
 USER ioq3srv

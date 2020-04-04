@@ -6,7 +6,7 @@ VERSION = 1.0.0
 PROJECT_NAME = rpi-quake3-server
 
 DOCKERFILE = ./Dockerfile
-TAG = wouterds/$(PROJECT_NAME)
+TAG = nightapp/$(PROJECT_NAME)
 
 clean:
 	-rm -f ./qemu-arm-static
