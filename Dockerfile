@@ -8,7 +8,7 @@ RUN curl https://ioquake3.org/data/quake3-latest-pk3s.zip --referer https://ioqu
 RUN echo 'y' | sh /tmp/build/compile.sh
 RUN unzip /tmp/build/quake3-latest-pk3s.zip -d /tmp/build/
 RUN cp -r /tmp/build/quake3-latest-pk3s/* ~/ioquake3
-RUN mkdir -p /data/maps
+//RUN mkdir -p /data/maps
 
 FROM arm32v6/alpine
 LABEL maintainer="wouterds <wouter.de.schuyter@gmail.com>"
@@ -19,7 +19,7 @@ RUN ln -sf /data/pak0.pk3 /home/ioq3srv/ioquake3/baseq3/pak0.pk3 && \
   ln -sf /data/server.cfg /home/ioq3srv/ioquake3/baseq3/server.cfg && \
   adduser ioq3srv -D && \
   rm -r /usr/bin/qemu-arm-static
-RUN ln -s /data/maps /home/ioq3srv/ioquake3/baseq3
+RUN ln -s /data/maps /home/ioq3srv/ioquake3/baseq3/maps
 
 USER ioq3srv
 EXPOSE 27960
