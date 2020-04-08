@@ -8,7 +8,6 @@ RUN curl https://ioquake3.org/data/quake3-latest-pk3s.zip --referer https://ioqu
 RUN echo 'y' | sh /tmp/build/compile.sh
 RUN unzip /tmp/build/quake3-latest-pk3s.zip -d /tmp/build/
 RUN cp -r /tmp/build/quake3-latest-pk3s/* ~/ioquake3
-//RUN mkdir -p /data/maps
 
 FROM arm32v6/alpine
 LABEL maintainer="wouterds <wouter.de.schuyter@gmail.com>"
